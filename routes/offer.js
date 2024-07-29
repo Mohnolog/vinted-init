@@ -188,6 +188,7 @@ router.get("/offer/:id", async (req, res) => {
       path: "owner",
       select: "account.username account.phone account.avatar",
     });
+    console.log(offer);
     res.json(offer);
   } catch (error) {
     console.log(error.message);
